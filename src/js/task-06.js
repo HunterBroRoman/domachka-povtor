@@ -16,9 +16,10 @@ input.addEventListener("blur", lossFocuc);
 
 
  function lossFocuc() {
-    if (+input.getAttribute('data-length') === input.value.length) { 
-      input.classList.remove('invalid');
+    if (input.dataset.length == input.value.length) { 
       input.classList.add('valid');
+      input.classList.remove('invalid');
+      
     } else {
       input.classList.remove('valid');
       input.classList.add('invalid');
